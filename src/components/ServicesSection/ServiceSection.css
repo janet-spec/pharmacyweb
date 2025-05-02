@@ -1,0 +1,103 @@
+.services-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--primary-navy);
+    color: var(--primary-white);
+  }
+  
+  .services-container {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: var(--spacing-xxl);
+    padding: 0 var(--spacing-lg);
+  }
+  
+  .services-header {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .services-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--primary-white);
+    line-height: 1.3;
+  }
+  
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .service-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: var(--spacing-md);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .service-item:hover {
+    opacity: 0.9;
+  }
+  
+  .service-item.active {
+    border-bottom-color: var(--primary-blue);
+  }
+  
+  .service-title {
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-white);
+  }
+  
+  .service-item.active .service-title {
+    color: var(--primary-blue);
+  }
+  
+  .service-description {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .services-footer {
+    margin-top: var(--spacing-xl);
+  }
+  
+  .services-link {
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+    transition: all 0.2s ease;
+  }
+  
+  .services-link:hover {
+    text-decoration: underline;
+  }
+  
+  .arrow {
+    font-size: var(--font-size-lg);
+  }
+  
+  @media (max-width: 992px) {
+    .services-container {
+      margin-right: auto;
+      max-width: 800px;
+    }
+    
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-lg);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services-list {
+      grid-template-columns: 1fr;
+    }
+  }

@@ -1,0 +1,329 @@
+/* Global Variables */
+:root {
+  --primary-navy: #1e2756;
+  --primary-blue: #2271b1;
+  --primary-white: #ffffff;
+  --accent-yellow: #f7d960;
+  --accent-pink: #f5c4c9;
+  --accent-light-blue: #a7c5eb;
+  --text-dark: #333333;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Container */
+.hero-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--primary-white);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--primary-navy);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.nav-item {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+}
+
+.nav-item.active {
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+.get-in-touch-btn {
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Main Hero Section */
+.hero-section {
+  display: flex;
+  background-color: var(--primary-navy);
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.hero-content {
+  width: 70%;
+  margin: auto;
+  padding: var(--spacing-xxl);
+  color: var(--primary-white);
+  background-image: url('path-to-pharmacy-woman-image.jpg');
+  background-size: cover;
+  background-position: center right;
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 39, 86, 0.6); /* Semi-transparent navy overlay */
+  z-index: 1;
+}
+
+.hero-title, .hero-description, .book-appointment-btn {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 5rem;
+  margin-bottom: var(--spacing-lg);
+  font-weight: bold;
+}
+
+.hero-description {
+  font-size: 1rem;
+  max-width: 450px;
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.5;
+}
+
+.book-appointment-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background-color: var(--accent-pink);
+  color: var(--text-dark);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.arrow-icon {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* Services Panel */
+.services-panel {
+  width: 30%;
+  background-color: var(--primary-white);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.panel-header h2 {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  font-weight: bold;
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.service-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.service-icon.operational {
+  background-color: #66d7d1; /* Teal color */
+}
+
+.service-icon.financial {
+  background-color: #f7d960; /* Yellow color */
+}
+
+.service-icon.scheduling {
+  background-color: #a7c5eb; /* Light blue color */
+}
+
+.service-icon.compliance {
+  background-color: #f5c4c9; /* Pink color */
+}
+
+.service-icon.training {
+  background-color: #c9e265; /* Light green color */
+}
+
+.service-icon.technology {
+  background-color: #7986cb; /* Purple color */
+}
+
+.read-more-section {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.read-more-btn {
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Service Cards Section */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+}
+
+.card {
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.card p {
+  font-size: 0.9rem;
+}
+
+.card-icon {
+  position: absolute;
+  bottom: var(--spacing-lg);
+  right: var(--spacing-lg);
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card.operational {
+  background-color: var(--accent-yellow);
+}
+
+.card.staff {
+  background-color: #d1ecf1; /* Light blue */
+}
+
+.card.financial {
+  background-color: var(--accent-pink);
+}
+
+.card.scheduling {
+  background-color: var(--accent-light-blue);
+}
+
+/* hero styling */
+.hero-image-container {
+  display: flex;
+  gap: clamp(1rem, 2vw, 3rem);
+  align-items: center;
+  max-height: 800px;
+}
+
+.hero-image {
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 2rem;
+  width: 100%;
+}
+
+.booking-button {
+  display: inline-flex;
+  width: max-content;
+}
+
+/* end of hero styling */
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-image-container {
+    flex-direction: column;
+  }
+  .hero-section {
+    flex-direction: column;
+  }
+  
+  .hero-content, .services-panel {
+    width: 100%;
+  }
+  
+  .service-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,153 @@
+.feature-carousel-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--background-light);
+  }
+  
+  .feature-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .feature-cards-container {
+    display: flex;
+    gap: var(--spacing-lg);
+    overflow: hidden;
+    width: 100%;
+    padding: var(--spacing-md) 0;
+  }
+  
+  .feature-card {
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-card.yellow {
+    background-color: var(--feature-yellow);
+  }
+  
+  .feature-card.teal {
+    background-color: var(--feature-teal);
+  }
+  
+  .feature-card.pink {
+    background-color: var(--feature-pink);
+  }
+  
+  .feature-card.blue {
+    background-color: var(--feature-blue);
+  }
+  
+  .feature-title {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .feature-description {
+    color: var(--text-dark);
+    font-size: var(--font-size-md);
+  }
+  
+  .feature-icon {
+    margin-top: var(--spacing-lg);
+    align-self: flex-end;
+  }
+  
+  .feature-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  .carousel-control {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-white);
+    border: 1px solid #EEE;
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    z-index: 2;
+  }
+  
+  .carousel-control:hover {
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+  }
+  
+  .carousel-control.prev {
+    left: -20px;
+    position: absolute;
+  }
+  
+  .carousel-control.next {
+    right: -20px;
+    position: absolute;
+  }
+  
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+  }
+  
+  .indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #DDD;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .indicator.active {
+    background-color: var(--primary-blue);
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 992px) {
+    .feature-cards-container {
+      flex-wrap: wrap;
+    }
+    
+    .feature-card {
+      min-width: calc(50% - var(--spacing-lg));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .feature-card {
+      min-width: 100%;
+    }
+    
+    .feature-cards-container {
+      padding: 0;
+    }
+    
+    .carousel-control {
+      position: static;
+      margin: 0 var(--spacing-sm);
+    }
+  }
